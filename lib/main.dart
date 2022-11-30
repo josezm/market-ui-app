@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marketplace/pages/home.dart';
+import 'package:marketplace/pages/payment.dart';
 import 'package:marketplace/pages/productPage.dart';
 
 import 'api/settings_api.dart';
@@ -49,7 +50,8 @@ class MyApp extends StatelessWidget {
         '/login': (_) => LoginPage(),
         '/home': (_) => HomePage(),
         '/newProduct': (_) => NewProduct(),
-        '/product': (_) => ProductPage()
+        '/product': (_) => ProductPage(),
+        '/payment': (_) => PaymentPage()
       },
     );
   }

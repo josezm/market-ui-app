@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:marketplace/models/product_model.dart';
 import 'package:marketplace/utils/colors.dart';
@@ -64,9 +63,8 @@ class _ProductPageState extends State<ProductPage> {
                         CustomOutlinedButton(
                           isFilled: true,
                           onPressed: () async {
-                            Uri uri = Uri.parse(
-                                "https://wa.me/${958237782}?text=Hola! Quiero comprar el producto *${item.title}*");
-                            await launch(uri.toString(), forceWebView: false);
+                            Navigator.pushNamed(context, '/payment',
+                                arguments: item);
                           },
                           text: 'Comprar',
                           loading: false,
